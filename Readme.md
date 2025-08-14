@@ -10,6 +10,7 @@ Just **simple command line parser**
 
 ## 📥 Installation
 ```dotnet add package NeoSimpleCommandLineParser --version 1.0.0```
+
 Add the ```SCLP``` namespace to your project. No external packages required
 
 ## 📌 Usage
