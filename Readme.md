@@ -8,6 +8,11 @@ Just **simple command line parser**
 - Activating functions via delegate
 - Easy to use
 
+## 📥 Installation
+```dotnet add package NeoSimpleCommandLineParser --version 1.0.0```
+
+Add the ```SCLP``` namespace to your project. No external packages required
+
 ## 📌 Usage
 ### Code example
 ``` C#
@@ -56,10 +61,6 @@ public class Program
     public static void Say(string[]? arguments) => Console.WriteLine("I just say");
 }
 ```
-
-## 📥 Installation
-
-Add the ```SCLP``` namespace to your project. No external packages required
 
 ## 🤝 Contributing
 We welcome your contributing
