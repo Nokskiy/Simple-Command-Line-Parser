@@ -4,6 +4,13 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <SignAssembly>False</SignAssembly>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>simplecommandlineparser</PackageId>
+    <Title>SimpleCommandLineParser</Title>
+    <Authors>Nokskiy</Authors>
+    <Description>Simple command line parser</Description>
+    <Copyright>@2025, Nokskiy</Copyright>
   </PropertyGroup>
 
 </Project>
