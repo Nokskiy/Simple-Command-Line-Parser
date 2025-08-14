@@ -16,11 +16,15 @@ public class Parser(string[] args,OptionsList options)
                 foreach (var opt in _options.Options)
                     if (opt.ShortName == optName)
                     {
-                        List<string> arguments = new List<string>();
+                        if(opt.AcceptArgs)
+                        {
+                            List<string> arguments = new List<string>();
 
-                        GetArgs(i, ref arguments);
+                            GetArgs(i, ref arguments);
 
-                        opt.Arguments = arguments.ToArray();
+                            opt.Arguments = arguments.ToArray();
+                        }
+                        opt.Activated = true;
                     }
             }
             else if (_args[i].ToString()[0].ToString() == "-" && _args[i].ToString()[1].ToString() == "-")
@@ -28,13 +32,17 @@ public class Parser(string[] args,OptionsList options)
                 string optName = _args[i].Remove(0, 2);
 
                 foreach (var opt in _options.Options)
-                    if (opt.ShortName == optName)
+                    if (opt.FullName == optName)
                     {
-                        List<string> arguments = new List<string>();
+                        if (opt.AcceptArgs)
+                        {
+                            List<string> arguments = new List<string>();
 
-                        GetArgs(i, ref arguments);
+                            GetArgs(i, ref arguments);
 
-                        opt.Arguments = arguments.ToArray();
+                            opt.Arguments = arguments.ToArray();
+                        }
+                        opt.Activated = true;
                     }
             }
         }
